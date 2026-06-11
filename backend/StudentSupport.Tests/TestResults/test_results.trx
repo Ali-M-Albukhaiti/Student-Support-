@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="1b4007f8-6ef7-410e-858d-c402b81c949e" name="qawsa@DESKTOP-4K45O89 2025-11-24 16:38:51" runUser="DESKTOP-4K45O89\qawsa" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-11-24T16:38:51.0323684+01:00" queuing="2025-11-24T16:38:51.0323696+01:00" start="2025-11-24T16:38:47.0617156+01:00" finish="2025-11-24T16:38:51.0607468+01:00" />
+  <TestSettings name="default" id="57ed33c2-4385-4d2c-b43d-08dbc0807891">
+    <Deployment runDeploymentRoot="qawsa_DESKTOP-4K45O89_2025-11-24_16_38_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="034f3cce-f173-4dff-9162-98f4b22a416a" testId="c40461ee-9a27-5380-0c30-b5fd1ad179da" testName="StudentSupport.Tests.AnswerServiceTests.AddAnswerAsync_ShouldAddAnswer_AndAwardPoints" computerName="DESKTOP-4K45O89" duration="00:00:00.0055121" startTime="2025-11-24T16:38:50.5545520+01:00" endTime="2025-11-24T16:38:50.5545521+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="034f3cce-f173-4dff-9162-98f4b22a416a" />
+    <UnitTestResult executionId="0a3096fb-0153-4167-812d-fdbf38af58ac" testId="da94e523-298d-54d8-43ee-18f3ad364fa0" testName="StudentSupport.Tests.PostServiceTests.CreatePost_ShouldAddPost_AndAwardPoints" computerName="DESKTOP-4K45O89" duration="00:00:00.0593983" startTime="2025-11-24T16:38:50.5547364+01:00" endTime="2025-11-24T16:38:50.5547365+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a3096fb-0153-4167-812d-fdbf38af58ac" />
+    <UnitTestResult executionId="d091a7c4-24cb-4dc6-9b05-2360709a6df7" testId="5a13c10b-5f20-7832-696f-90bf2be91923" testName="StudentSupport.Tests.AnswerServiceTests.UpvoteAnswerAsync_ShouldToggleUpvotes" computerName="DESKTOP-4K45O89" duration="00:00:00.0122761" startTime="2025-11-24T16:38:50.5554959+01:00" endTime="2025-11-24T16:38:50.5554969+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d091a7c4-24cb-4dc6-9b05-2360709a6df7" />
+    <UnitTestResult executionId="1f02a7bc-02dc-4e53-ad2c-f619f341bbe0" testId="b587abe1-bcc7-0a52-e846-48d08242febc" testName="StudentSupport.Tests.QuestionServiceTests.DeleteQuestion_ShouldRemoveQuestion" computerName="DESKTOP-4K45O89" duration="00:00:00.0101575" startTime="2025-11-24T16:38:50.5547762+01:00" endTime="2025-11-24T16:38:50.5547763+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f02a7bc-02dc-4e53-ad2c-f619f341bbe0" />
+    <UnitTestResult executionId="cdb9a462-363c-40b0-8c99-dbec0d1b20fd" testId="29229f3f-63b8-2492-e3f8-d11ed2142584" testName="StudentSupport.Tests.QuestionServiceTests.CreateQuestion_ShouldAddQuestion" computerName="DESKTOP-4K45O89" duration="00:00:00.0448196" startTime="2025-11-24T16:38:50.5486807+01:00" endTime="2025-11-24T16:38:50.5486811+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cdb9a462-363c-40b0-8c99-dbec0d1b20fd" />
+    <UnitTestResult executionId="d19d8a10-066a-4a44-894e-d2d601945535" testId="cdab7050-3c9b-77ef-2ffe-e2c152cd0fc9" testName="StudentSupport.Tests.AnswerServiceTests.MarkAsBestAnswerAsync_ShouldMarkOnlyOneAnswer" computerName="DESKTOP-4K45O89" duration="00:00:00.0405915" startTime="2025-11-24T16:38:50.5399318+01:00" endTime="2025-11-24T16:38:50.5400180+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d19d8a10-066a-4a44-894e-d2d601945535" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="StudentSupport.Tests.AnswerServiceTests.AddAnswerAsync_ShouldAddAnswer_AndAwardPoints" storage="c:\users\qawsa\onedrive\documenten\fs app\gitlab runner\builds\gyxcuyjjv\0\i458550\student-support\studentsupport.tests\bin\debug\net9.0\studentsupport.tests.dll" id="c40461ee-9a27-5380-0c30-b5fd1ad179da">
+      <Execution id="034f3cce-f173-4dff-9162-98f4b22a416a" />
+      <TestMethod codeBase="C:\Users\qawsa\OneDrive\Documenten\FS App\Gitlab runner\builds\gyXcuyJJV\0\I458550\student-support\StudentSupport.Tests\bin\Debug\net9.0\StudentSupport.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="StudentSupport.Tests.AnswerServiceTests" name="AddAnswerAsync_ShouldAddAnswer_AndAwardPoints" />
+    </UnitTest>
+    <UnitTest name="StudentSupport.Tests.AnswerServiceTests.UpvoteAnswerAsync_ShouldToggleUpvotes" storage="c:\users\qawsa\onedrive\documenten\fs app\gitlab runner\builds\gyxcuyjjv\0\i458550\student-support\studentsupport.tests\bin\debug\net9.0\studentsupport.tests.dll" id="5a13c10b-5f20-7832-696f-90bf2be91923">
+      <Execution id="d091a7c4-24cb-4dc6-9b05-2360709a6df7" />
+      <TestMethod codeBase="C:\Users\qawsa\OneDrive\Documenten\FS App\Gitlab runner\builds\gyXcuyJJV\0\I458550\student-support\StudentSupport.Tests\bin\Debug\net9.0\StudentSupport.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="StudentSupport.Tests.AnswerServiceTests" name="UpvoteAnswerAsync_ShouldToggleUpvotes" />
+    </UnitTest>
+    <UnitTest name="StudentSupport.Tests.PostServiceTests.CreatePost_ShouldAddPost_AndAwardPoints" storage="c:\users\qawsa\onedrive\documenten\fs app\gitlab runner\builds\gyxcuyjjv\0\i458550\student-support\studentsupport.tests\bin\debug\net9.0\studentsupport.tests.dll" id="da94e523-298d-54d8-43ee-18f3ad364fa0">
+      <Execution id="0a3096fb-0153-4167-812d-fdbf38af58ac" />
+      <TestMethod codeBase="C:\Users\qawsa\OneDrive\Documenten\FS App\Gitlab runner\builds\gyXcuyJJV\0\I458550\student-support\StudentSupport.Tests\bin\Debug\net9.0\StudentSupport.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="StudentSupport.Tests.PostServiceTests" name="CreatePost_ShouldAddPost_AndAwardPoints" />
+    </UnitTest>
+    <UnitTest name="StudentSupport.Tests.QuestionServiceTests.DeleteQuestion_ShouldRemoveQuestion" storage="c:\users\qawsa\onedrive\documenten\fs app\gitlab runner\builds\gyxcuyjjv\0\i458550\student-support\studentsupport.tests\bin\debug\net9.0\studentsupport.tests.dll" id="b587abe1-bcc7-0a52-e846-48d08242febc">
+      <Execution id="1f02a7bc-02dc-4e53-ad2c-f619f341bbe0" />
+      <TestMethod codeBase="C:\Users\qawsa\OneDrive\Documenten\FS App\Gitlab runner\builds\gyXcuyJJV\0\I458550\student-support\StudentSupport.Tests\bin\Debug\net9.0\StudentSupport.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="StudentSupport.Tests.QuestionServiceTests" name="DeleteQuestion_ShouldRemoveQuestion" />
+    </UnitTest>
+    <UnitTest name="StudentSupport.Tests.AnswerServiceTests.MarkAsBestAnswerAsync_ShouldMarkOnlyOneAnswer" storage="c:\users\qawsa\onedrive\documenten\fs app\gitlab runner\builds\gyxcuyjjv\0\i458550\student-support\studentsupport.tests\bin\debug\net9.0\studentsupport.tests.dll" id="cdab7050-3c9b-77ef-2ffe-e2c152cd0fc9">
+      <Execution id="d19d8a10-066a-4a44-894e-d2d601945535" />
+      <TestMethod codeBase="C:\Users\qawsa\OneDrive\Documenten\FS App\Gitlab runner\builds\gyXcuyJJV\0\I458550\student-support\StudentSupport.Tests\bin\Debug\net9.0\StudentSupport.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="StudentSupport.Tests.AnswerServiceTests" name="MarkAsBestAnswerAsync_ShouldMarkOnlyOneAnswer" />
+    </UnitTest>
+    <UnitTest name="StudentSupport.Tests.QuestionServiceTests.CreateQuestion_ShouldAddQuestion" storage="c:\users\qawsa\onedrive\documenten\fs app\gitlab runner\builds\gyxcuyjjv\0\i458550\student-support\studentsupport.tests\bin\debug\net9.0\studentsupport.tests.dll" id="29229f3f-63b8-2492-e3f8-d11ed2142584">
+      <Execution id="cdb9a462-363c-40b0-8c99-dbec0d1b20fd" />
+      <TestMethod codeBase="C:\Users\qawsa\OneDrive\Documenten\FS App\Gitlab runner\builds\gyXcuyJJV\0\I458550\student-support\StudentSupport.Tests\bin\Debug\net9.0\StudentSupport.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="StudentSupport.Tests.QuestionServiceTests" name="CreateQuestion_ShouldAddQuestion" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="c40461ee-9a27-5380-0c30-b5fd1ad179da" executionId="034f3cce-f173-4dff-9162-98f4b22a416a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="da94e523-298d-54d8-43ee-18f3ad364fa0" executionId="0a3096fb-0153-4167-812d-fdbf38af58ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a13c10b-5f20-7832-696f-90bf2be91923" executionId="d091a7c4-24cb-4dc6-9b05-2360709a6df7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b587abe1-bcc7-0a52-e846-48d08242febc" executionId="1f02a7bc-02dc-4e53-ad2c-f619f341bbe0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="29229f3f-63b8-2492-e3f8-d11ed2142584" executionId="cdb9a462-363c-40b0-8c99-dbec0d1b20fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cdab7050-3c9b-77ef-2ffe-e2c152cd0fc9" executionId="d19d8a10-066a-4a44-894e-d2d601945535" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="6" executed="6" passed="6" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 9.0.11)&#xD;
+[xUnit.net 00:00:00.66]   Discovering: StudentSupport.Tests&#xD;
+[xUnit.net 00:00:00.87]   Discovered:  StudentSupport.Tests&#xD;
+[xUnit.net 00:00:00.89]   Starting:    StudentSupport.Tests&#xD;
+[xUnit.net 00:00:01.15]   Finished:    StudentSupport.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

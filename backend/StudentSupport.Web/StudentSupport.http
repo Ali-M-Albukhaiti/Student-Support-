@@ -1,0 +1,46 @@
+@rootURL = http://localhost:5105
+
+GET {{rootURL}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{rootURL}}/api/posts/seed
+Accept: application/json
+###
+GET {{rootURL}}/api/posts
+Accept: application/json
+###
+GET {{rootURL}}/api/posts/1
+Accept: application/json
+###
+POST {{rootURL}}/api/posts
+Content-Type: application/json
+{
+  "title": "Test Post",
+  "content": "This is a test",
+  "semester": 3,
+  "authorId": 3,
+  "author": null
+}
+###
+PUT {{rootURL}}/api/posts/3
+Content-Type: application/json
+{
+  "id": 3,
+  "title": "Update post",
+  "content": "This is a test",
+  "semester": 3,
+  "authorId": 3,
+  "author": null
+}
+###
+DELETE {{rootURL}}/api/posts/4
+Content-Type: application/json
+{
+  "id": 4,
+  "title": "Update post",
+  "content": "This is a test",
+  "semester": 3,
+  "authorId": 3,
+  "author": null
+}

@@ -1,0 +1,52 @@
+variables:
+  BUILD_CONFIGURATION: "Debug"
+  GIT_CLEAN_FLAGS: none   # Prevent GitLab Runner from cleaning files automatically
+
+stages:
+  - build
+  - test
+
+# BUILD STAGE
+
+build:
+  stage: build
+  tags:
+    - dotnet        # Uses the runner tagged "dotnet"
+  before_script:
+    # Show .NET SDK version (useful for debugging)
+    - dotnet --version
+
+    # Kill any processes that might lock files (on Windows runners)
+    - powershell -Command "Get-Process -Name 'dotnet','msbuild','vbcscompiler' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue; Start-Sleep -Seconds 2"
+
+    # Clean all bin and obj folders
+    - powershell -Command "Get-ChildItem -Path . -Include bin,obj -Recurse -Directory | ForEach-Object { Remove-Item $_.FullName -Recurse -Force -ErrorAction SilentlyContinue }"
+
+  script:
+    # Restore all NuGet packages
+    - dotnet restore
+
+    # Build all projects
+    - dotnet build --configuration $BUILD_CONFIGURATION --no-restore
+
+  after_script:
+    # Clean up any leftover processes
+    - powershell -Command "Get-Process -Name 'dotnet','msbuild' -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue"
+
+# TEST STAGE
+
+test:
+  stage: test
+  tags:
+    - dotnet
+  script:
+    # Run all unit tests without rebuilding (since build already done)
+    - dotnet test --configuration $BUILD_CONFIGURATION --no-build --logger "trx;LogFileName=test_results.trx"
+
+  artifacts:
+    when: always
+    paths:
+      - "**/TestResults/*.trx"
+    reports:
+      junit: "**/TestResults/*.xml"
+

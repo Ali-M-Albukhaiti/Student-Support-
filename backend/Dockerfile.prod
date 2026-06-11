@@ -1,0 +1,32 @@
+﻿# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
+
+# Copy solution and project files
+COPY ["StudentSupport.Web/StudentSupport.Web.csproj", "StudentSupport.Web/"]
+COPY ["StudentSupport.BusinessLogic/StudentSupport.BusinessLogic.csproj", "StudentSupport.BusinessLogic/"]
+COPY ["StudentSupport.DataAccess/StudentSupport.DataAccess.csproj", "StudentSupport.DataAccess/"]
+COPY ["StudentSupport.Models/StudentSupport.Models.csproj", "StudentSupport.Models/"]
+
+# Restore dependencies
+RUN dotnet restore "StudentSupport.Web/StudentSupport.Web.csproj"
+
+# Copy everything else
+COPY . .
+
+# Build and publish
+WORKDIR "/src/StudentSupport.Web"
+RUN dotnet publish -c Release -o /app/publish
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
+WORKDIR /app
+COPY --from=build /app/publish .
+
+# Create migrations directory and copy migrations
+RUN mkdir -p Migrations
+COPY --from=build /src/StudentSupport.DataAccess/Migrations ./Migrations/
+
+EXPOSE 5000
+EXPOSE 5001
+ENTRYPOINT ["dotnet", "StudentSupport.Web.dll"]

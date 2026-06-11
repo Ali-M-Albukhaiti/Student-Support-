@@ -1,0 +1,61 @@
+image: node:22
+
+variables:
+  NODE_ENV: "development"
+  GIT_CLEAN_FLAGS: none
+
+stages:
+  - install
+  - build
+  - test
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: install
+  tags:
+    - node
+  script:
+    - echo "Installing project dependencies..."
+    - npm ci
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1h
+
+build_project:
+  stage: build
+  tags:
+    - node
+  script:
+    - echo "Building the React app..."
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 week
+  only:
+    - main
+    - dev
+
+test_project:
+  stage: test
+  tags:
+    - node
+  before_script:
+    - cd "C:/Users/qawsa/student-support-frontend"
+  script:
+    - echo "Running tests with Vitest..."
+    - npm ci
+    - npm run test:ci
+  artifacts:
+    paths:
+      - coverage/
+    expire_in: 1 week
+  only:
+    - main
+    - dev
+    - merge_requests
